@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--http://www.reducirfotos.com/ Modificar tamanno imagenes-->
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Milky Way Service</title>
+        <meta name="generator" content="Bootply" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">        
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+        <!-- ********************************************************** -->
+        <!-- Includes para el datapicker -->
+        <!-- ********************************************************** -->
+        <link href="css/datetimepicker.min.css" rel="stylesheet" type="text/css"/>
+        <script src="js/datetimepicker.js" type="text/javascript"></script>
+
+        <!--load font awesome-->
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine">
+
+        <link href="css/styles.css" rel="stylesheet">
+
+        <!--MODAL-->
+
+    </head>
+    <body>
+        <div class="navbar-wrapper">
+
+            <div class="container">
+
+                <div class="navbar navbar-inverse navbar-static-top">
+
+                    <div class="navbar-header">
+                        <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <a class="navbar-brand active" href="#">Milky Way Service</a>
+                    </div>
+
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#seccionquienessomos">¿Quiénes Somos?</a></li>
+                            <li><a href="#seccionexpertos">Nuestros Expertos</a></li>
+                            <li><a href="#seccioncontacto" target="ext">Contáctenos</a></li>
+                            <li><a href="#seccioncategoria">Categorías</a></li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gestionar Sitio<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="GestionarUsuario.html">Gestionar Usuarios</a></li>
+                                    <li><a href="GestionarAdministrador.html">Gestionar Administradores</a></li>
+                                    <li><a href="GestionarExperto.html">Gestionar Expertos</a></li>
+                                    <li><a href="GestionarCategoria.html">Gestionar Categorías</a></li>
+                                    <li><a href="GestionarTema.html">Gestionar Temas</a></li>
+                                    <li><a href="#">Reportes</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#" id="btMostarIngresar">Entrar</a></li>
+                            <li><a href="#" id="btMostarForm">Registrarme</a></li>
+
+
+
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div><!-- /container -->
+
+        </div><!-- /navbar wrapper -->
+
+        <!--    Modal Registro   -->
+        <div class="modal fade" id="myModalFormulario" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" id="myModalTitle">Registrarme
+                    </div>
+                    <div class="modal-body" id="myModalMessage">
+                        <form role="form" onsubmit="return false;" id="formPersonas">
+                            <div class="form-group" id="groupUsuario">
+                                <label for="usuario">Usuario:</label>
+                                <input type="text" class="form-control" id="usuario" placeholder="Nombre">
+                            </div>
+
+                            <div class="form-group" id="groupContraseña">
+                                <label for="contraeña">Contraseña:</label>
+                                <input type="password" class="form-control" id="contraseña" placeholder="Contraseña" >
+                            </div>
+
+                            <div class="form-group" id="groupNombre">
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                            </div>
+
+                            <div class="form-group" id="groupApellido">
+                                <label for="apellido">Apellidos:</label>
+                                <input type="text" class="form-control" id="apellidos" placeholder="Apellidos">
+                            </div>
+
+                            <div class="form-group" id="groupFechaNacimiento">
+                                <label for="dpFechaNacimiento">Fecha Nacimiento:</label>
+                                <div id="dpFechaNacimiento" class="input-group date form_date" data-date="" data-date-format="dd/mm/yyyy" data-link-field="dtp_input2" data-link-format="dd/mm/yyyy">
+                                    <input class="form-control" type="text" value="" readonly placeholder="dd/mm/aaaa" id="dpFechaNacimientoText">
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="form-group" id="groupDireccion">
+                                <label for="direccion">Dirección:</label>
+                                <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+                                <div id="map"></div>
+                            </div>
+
+                            <div class="form-group" id="groupTelefono">
+                                <label for="telefono">Telefono Trabajo:</label>
+                                <input type="text" class="form-control" id="telefono" placeholder="Telefono Trabajo">
+                            </div>
+ 
+                            <div class="form-group" id="groupCelular">
+                                <label for="celular">Celular:</label>
+                                <input type="text" class="form-control" id="celular" placeholder="Celular">
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="hidden" value="agregarPersona" id="personasAction"/>
+                                <button type="submit" class="btn btn-primary" id="enviar">Guardar</button>
+                                <button type="reset" class="btn btn-danger" id="cancelar">Cancelar</button>
+                            </div>
+
+                            <div class="form-group height25" >
+                                <div class="alert alert-success hiddenDiv" id="mesajeResult">
+                                    <strong id="mesajeResultNeg">Info!</strong> 
+                                    <span id="mesajeResultText">This alert box could indicate a neutral informative change or action.</span>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--    Modal LogIn   -->
+        <div class="modal fade" id="myModalIngresar" role="dialog">
+            <div class="modal-dialog">
+                <div class="loginmodal-container">
+                    <h1>Login to Your Account</h1><br>
+                    <form>
+                        <input type="text" name="user" placeholder="Username">
+                        <input type="password" name="pass" placeholder="Password">
+                        <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+                    </form>
+
+                    <div class="login-help">
+                        <a href="#">Register</a> - <a href="#">Forgot Password</a>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        <!-- Carousel
+        ================================================== -->
+        <div id="myCarousel" class="carousel slide">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner">
+
+                <div class="item active">
+                    <img src="Imagenes/milkyway.jpg" style="width:100%" class="img-responsive">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <p id="comentarios">Excelente servicio, me ayudaron demasiado. Apartir de hoy serán
+                                mi página de servicios.</p>      
+                            <p id="clientes">-Rosa Alfaro</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="Imagenes/milkyway.jpg" class="img-responsive">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <p id="comentarios">La variedad de categorias me ayudaron a solucionar mi problema.</p>      
+                            <p id="clientes">-Carlos Arce</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="Imagenes/milkyway.jpg" class="img-responsive">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <p id="comentarios">Me encanta la página. Los expertos siempre tienen las respuestas que
+                                necesito. Sigan así!!</p>      
+                            <p id="clientes">-Alberto Marín</p> 
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="icon-prev"></span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="icon-next"></span>
+            </a>  
+        </div>
+
+        <!-- Marketing messaging and featurettes
+        ================================================== -->
+        <!-- Wrap the rest of the page in another container to center all the content. -->
+
+        <div class="container marketing">
+
+            <!-- Three columns of text below the carousel -->
+            <div class="row" id="seccioncategoria">
+                <div>
+                    <h1>Categorías</h1>
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <img class="img-circle imgcategoria" src="Imagenes/tecno.jpg">
+                    <h2>Tecnología</h2>
+                    <p>Celulares, Tablets,laptops, pcs...</p>
+                    <p><a class="btn btn-default" href="#">Ver detalles »</a></p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img class="img-circle imgcategoria" src="Imagenes/astro.jpg">
+                    <h2>Astronomía</h2>
+                    <p>Constelaciones, Planetas, teorías, cielo nocturno...</p>
+                    <p><a class="btn btn-default" href="#">Ver detalles »</a></p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img class="img-circle imgcategoria" src="Imagenes/mate.jpg">
+                    <h2>Matemática</h2>
+                    <p>Lógica, Cálculo, Álgebra Lineal, Probabilidad y Estadística...</p>
+                    <p><a class="btn btn-default" href="#">Ver detalles »</a></p>
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <img class="img-circle imgcategoria" src="Imagenes/gastro.jpg">
+                    <h2>Gastronomía</h2>
+                    <p>Técnicas de cocina, tipos de comida, postres...</p>
+                    <p><a class="btn btn-default" href="#">Ver detalles »</a></p>
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <img class="img-circle imgcategoria" src="Imagenes/lite.jpg">
+                    <h2>Literatura</h2>
+                    <p>Poesía, figuras literarias, ortografía, novelas, escritores...</p>
+                    <p><a class="btn btn-default" href="#">Ver detalles »</a></p>
+                </div>
+
+            </div><!-- /.row -->
+
+
+            <!-- START THE FEATURETTES -->
+
+            <hr class="featurette-divider">
+
+            <div class="featurette" id="seccionquienessomos">
+                <img class="featurette-image img-circle pull-right" src="Imagenes/1galaxypurple.jpg">
+                <h2 class="featurette-heading">Milky Way Service <span class="text-muted">¿Quiénes Somos?</span></h2>
+                <p class="lead">Milky way Service es una compañía de profesionales dedicados a brindar ayuda.
+                    Nuestra misión es ser la empresa de e-service número uno del país </p>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="featurette" id="seccionexpertos">
+                <img class="featurette-image img-circle pull-left" src="Imagenes/1chanchito.jpg">
+                <h2 class="featurette-heading">Nuestros Expertos <span class="text-muted">Conózcalos</span></h2>
+                <p class="lead">Somos un conjunto de profesionales graduados de las mejores universidades del país.
+                    Nuestra principal razón es poder crear una red de conocimiento y así brindar un servicio</p>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="featurette" id="seccioncontacto">
+                <img class="featurette-image img-circle pull-right" src="Imagenes/1spock.jpg">
+                <h2 class="featurette-heading">Contáctenos!<span class="text-muted"> Milky Way Service</span></h2>
+                <p class="lead">En caso de querer formar parte de nuestro equipo de profesionales o para recibir mayor información escribir al correo milkywayservice@galaxy.com </p>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <!-- /END THE FEATURETTES -->
+
+
+        </div><!-- /.container -->
+        <footer class="text-center">
+            <p class="pull-right"><a href="#">Back to top</a></p>
+            <div class="social">
+                <ul>
+                    <li><a href="#"><i class="fa fa-lg fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-lg fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-lg fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-lg fa-flickr"></i></a></li>
+                    <li><a href="#"><i class="fa fa-lg fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </footer>         
+        <!-- script references -->
+        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/script.js" type="text/javascript"></script>
+        <script>
+                            // This example adds a search box to a map, using the Google Place Autocomplete
+                            // feature. People can enter geographical searches. The search box will return a
+                            // pick list containing a mix of places and predicted search terms.
+
+                            // This example requires the Places library. Include the libraries=places
+                            // parameter when you first load the API. For example:
+                            // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+                            function initAutocomplete() {
+                                var map = new google.maps.Map(document.getElementById('map'), {
+                                    center: {lat: -33.8688, lng: 151.2195},
+                                    zoom: 13,
+                                    mapTypeId: 'roadmap'
+                                });
+
+                                // Create the search box and link it to the UI element.
+                                var input = document.getElementById('pac-input');
+                                var searchBox = new google.maps.places.SearchBox(input);
+                                map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+                                // Bias the SearchBox results towards current map's viewport.
+                                map.addListener('bounds_changed', function () {
+                                    searchBox.setBounds(map.getBounds());
+                                });
+
+                                var markers = [];
+                                // Listen for the event fired when the user selects a prediction and retrieve
+                                // more details for that place.
+                                searchBox.addListener('places_changed', function () {
+                                    var places = searchBox.getPlaces();
+
+                                    if (places.length == 0) {
+                                        return;
+                                    }
+
+                                    // Clear out the old markers.
+                                    markers.forEach(function (marker) {
+                                        marker.setMap(null);
+                                    });
+                                    markers = [];
+
+                                    // For each place, get the icon, name and location.
+                                    var bounds = new google.maps.LatLngBounds();
+                                    places.forEach(function (place) {
+                                        if (!place.geometry) {
+                                            console.log("Returned place contains no geometry");
+                                            return;
+                                        }
+                                        var icon = {
+                                            url: place.icon,
+                                            size: new google.maps.Size(71, 71),
+                                            origin: new google.maps.Point(0, 0),
+                                            anchor: new google.maps.Point(17, 34),
+                                            scaledSize: new google.maps.Size(25, 25)
+                                        };
+
+                                        // Create a marker for each place.
+                                        markers.push(new google.maps.Marker({
+                                            map: map,
+                                            icon: icon,
+                                            title: place.name,
+                                            position: place.geometry.location
+                                        }));
+
+                                        if (place.geometry.viewport) {
+                                            // Only geocodes have viewport.
+                                            bounds.union(place.geometry.viewport);
+                                        } else {
+                                            bounds.extend(place.geometry.location);
+                                        }
+                                    });
+                                    map.fitBounds(bounds);
+                                });
+                            }
+
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBd2LzkTQ5I4l3cbjaQE8_6Q3unyhSxBS0&libraries=places&callback=initAutocomplete"
+        async defer></script>
+    </body>
+</html>
